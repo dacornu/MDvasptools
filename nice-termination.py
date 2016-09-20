@@ -1,5 +1,7 @@
+import sys
+
 #Create the array 'vasp' with all the lines of vasprun.xml file
-with open("vasprun.xml") as vaspfile: 
+with open(sys.argv[1],'rb') as vaspfile: 
     vasp = vaspfile.readlines()
 
 #Find last finished step and first line of this step
